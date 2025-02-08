@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car rental</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header>
+    <div class="menu-icon">
+      <div class="top-line"></div>
+      <div class="bottom-line"></div>
+    </div>
+
+    <img src="./assets/svg/logo.svg" alt="logo">
+
+    <button>Login / Register</button>
+  </header>
+  <section class="discover-section">
+    <h1 class="fadeupBlur"><span>Discover the world on wheels</span> <span>with our car rental service</span></h1>
+    <img class="fadeup" src="./assets/images/image 23.png" alt="car">
+  </section>
+  <div class="filter-container">
+    <div class="filter">
+      <div class="div-nonName">
+      <label for="location-input">Pick-up Location</label>
+      <div class="location-input location">
+        <div>
+        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.21618 0.861348C11.6615 0.490616 15.4061 3.83522 15.4998 8.14768L15.5 8.16578C15.5 9.67319 15.0278 11.082 14.1909 12.2919L14.1826 12.3037L9.95288 18.1967C9.94449 18.2084 9.93579 18.2198 9.9268 18.2311C8.95457 19.4473 7.04244 19.5221 6.10822 18.193L1.87713 12.2981C0.774221 10.7344 0.194655 8.76023 0.663345 6.67094C1.24127 3.53814 3.97285 1.23191 7.19074 0.863863C7.19921 0.862894 7.20769 0.862056 7.21618 0.861348ZM7.36744 2.5212C4.7919 2.821 2.72361 4.65449 2.2999 6.98674C2.29773 6.99865 2.29531 7.01052 2.29262 7.02233C1.93949 8.57734 2.3541 10.0813 3.23718 11.3347L7.47075 17.2331C7.69634 17.5556 8.25902 17.6311 8.61341 17.2046L12.8242 11.3379C13.4759 10.3936 13.8315 9.31771 13.8333 8.17482C13.7562 4.8596 10.8749 2.2356 7.36744 2.5212Z" fill="black"/>
+          </svg>
+        </div>
+          <input type="text" placeholder="Search a location">          
+      </div>
+      </div>
+
+      <div class="div-nonName">
+      <label for="Pick-up-date-input">Pick-up date</label>
+      <div class="Pick-up-date-input date">
+          <input type="date" placeholder="Search a location">          
+      </div>
+    </div>
+
+      <div class="div-nonName">
+      <label for="Drop-off-input">Pick-up Location</label>
+      <div class="Drop-off-input location">
+        <div>
+        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.21618 0.861348C11.6615 0.490616 15.4061 3.83522 15.4998 8.14768L15.5 8.16578C15.5 9.67319 15.0278 11.082 14.1909 12.2919L14.1826 12.3037L9.95288 18.1967C9.94449 18.2084 9.93579 18.2198 9.9268 18.2311C8.95457 19.4473 7.04244 19.5221 6.10822 18.193L1.87713 12.2981C0.774221 10.7344 0.194655 8.76023 0.663345 6.67094C1.24127 3.53814 3.97285 1.23191 7.19074 0.863863C7.19921 0.862894 7.20769 0.862056 7.21618 0.861348ZM7.36744 2.5212C4.7919 2.821 2.72361 4.65449 2.2999 6.98674C2.29773 6.99865 2.29531 7.01052 2.29262 7.02233C1.93949 8.57734 2.3541 10.0813 3.23718 11.3347L7.47075 17.2331C7.69634 17.5556 8.25902 17.6311 8.61341 17.2046L12.8242 11.3379C13.4759 10.3936 13.8315 9.31771 13.8333 8.17482C13.7562 4.8596 10.8749 2.2356 7.36744 2.5212Z" fill="black"/>
+          </svg>
+        </div>
+          <input type="text" placeholder="Search a location">
+      </div>
+      </div>
+
+      <div class="div-nonName">
+      <label for="Drop-off-input">Drop-off date</label>
+      <div class="Drop-off-input date">
+          <input type="date" placeholder="Search a location">          
+      </div>
+      </div>
+
+      <button>Find a Vehicle <i class='bx bx-right-arrow-alt'></i></button>
+    </div>
+  </div>
+  <div style="height: 100vh;"></div>
+</body>
+</html>
