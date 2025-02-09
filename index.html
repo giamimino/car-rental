@@ -9,14 +9,15 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+  <div class="watcher"></div>
   <header>
     <div class="menu-icon">
       <div class="top-line"></div>
       <div class="bottom-line"></div>
     </div>
-
+    
     <img src="./assets/svg/logo.svg" alt="logo">
-
+    
     <button>Login / Register</button>
   </header>
   <section class="discover-section">
@@ -26,46 +27,451 @@
   <div class="filter-container">
     <div class="filter">
       <div class="div-nonName">
-      <label for="location-input">Pick-up Location</label>
-      <div class="location-input location">
-        <div>
-        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <label for="location-input">Pick-up Location</label>
+        <div class="location-input location">
+          <div>
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M7.21618 0.861348C11.6615 0.490616 15.4061 3.83522 15.4998 8.14768L15.5 8.16578C15.5 9.67319 15.0278 11.082 14.1909 12.2919L14.1826 12.3037L9.95288 18.1967C9.94449 18.2084 9.93579 18.2198 9.9268 18.2311C8.95457 19.4473 7.04244 19.5221 6.10822 18.193L1.87713 12.2981C0.774221 10.7344 0.194655 8.76023 0.663345 6.67094C1.24127 3.53814 3.97285 1.23191 7.19074 0.863863C7.19921 0.862894 7.20769 0.862056 7.21618 0.861348ZM7.36744 2.5212C4.7919 2.821 2.72361 4.65449 2.2999 6.98674C2.29773 6.99865 2.29531 7.01052 2.29262 7.02233C1.93949 8.57734 2.3541 10.0813 3.23718 11.3347L7.47075 17.2331C7.69634 17.5556 8.25902 17.6311 8.61341 17.2046L12.8242 11.3379C13.4759 10.3936 13.8315 9.31771 13.8333 8.17482C13.7562 4.8596 10.8749 2.2356 7.36744 2.5212Z" fill="black"/>
-          </svg>
-        </div>
-          <input type="text" placeholder="Search a location">          
+        </svg>
       </div>
-      </div>
-
+      <input type="text" placeholder="Search a location">          
+    </div>
+  </div>
+  
       <div class="div-nonName">
       <label for="Pick-up-date-input">Pick-up date</label>
       <div class="Pick-up-date-input date">
           <input type="date" placeholder="Search a location">          
       </div>
     </div>
-
-      <div class="div-nonName">
+    
+    <div class="div-nonName">
       <label for="Drop-off-input">Pick-up Location</label>
       <div class="Drop-off-input location">
         <div>
-        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.21618 0.861348C11.6615 0.490616 15.4061 3.83522 15.4998 8.14768L15.5 8.16578C15.5 9.67319 15.0278 11.082 14.1909 12.2919L14.1826 12.3037L9.95288 18.1967C9.94449 18.2084 9.93579 18.2198 9.9268 18.2311C8.95457 19.4473 7.04244 19.5221 6.10822 18.193L1.87713 12.2981C0.774221 10.7344 0.194655 8.76023 0.663345 6.67094C1.24127 3.53814 3.97285 1.23191 7.19074 0.863863C7.19921 0.862894 7.20769 0.862056 7.21618 0.861348ZM7.36744 2.5212C4.7919 2.821 2.72361 4.65449 2.2999 6.98674C2.29773 6.99865 2.29531 7.01052 2.29262 7.02233C1.93949 8.57734 2.3541 10.0813 3.23718 11.3347L7.47075 17.2331C7.69634 17.5556 8.25902 17.6311 8.61341 17.2046L12.8242 11.3379C13.4759 10.3936 13.8315 9.31771 13.8333 8.17482C13.7562 4.8596 10.8749 2.2356 7.36744 2.5212Z" fill="black"/>
+          <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.21618 0.861348C11.6615 0.490616 15.4061 3.83522 15.4998 8.14768L15.5 8.16578C15.5 9.67319 15.0278 11.082 14.1909 12.2919L14.1826 12.3037L9.95288 18.1967C9.94449 18.2084 9.93579 18.2198 9.9268 18.2311C8.95457 19.4473 7.04244 19.5221 6.10822 18.193L1.87713 12.2981C0.774221 10.7344 0.194655 8.76023 0.663345 6.67094C1.24127 3.53814 3.97285 1.23191 7.19074 0.863863C7.19921 0.862894 7.20769 0.862056 7.21618 0.861348ZM7.36744 2.5212C4.7919 2.821 2.72361 4.65449 2.2999 6.98674C2.29773 6.99865 2.29531 7.01052 2.29262 7.02233C1.93949 8.57734 2.3541 10.0813 3.23718 11.3347L7.47075 17.2331C7.69634 17.5556 8.25902 17.6311 8.61341 17.2046L12.8242 11.3379C13.4759 10.3936 13.8315 9.31771 13.8333 8.17482C13.7562 4.8596 10.8749 2.2356 7.36744 2.5212Z" fill="black"/>
           </svg>
         </div>
-          <input type="text" placeholder="Search a location">
+        <input type="text" placeholder="Search a location">
       </div>
-      </div>
-
-      <div class="div-nonName">
+    </div>
+    
+    <div class="div-nonName">
       <label for="Drop-off-input">Drop-off date</label>
       <div class="Drop-off-input date">
-          <input type="date" placeholder="Search a location">          
+        <input type="date" placeholder="Search a location">          
       </div>
-      </div>
-
+    </div>
+    
       <button>Find a Vehicle <i class='bx bx-right-arrow-alt'></i></button>
     </div>
   </div>
-  <div style="height: 100vh;"></div>
+<div class="white"></div>
+  <section class="brands-section">
+    <div class="section-title">
+      <h1>Rent by Brands</h1>
+      
+      <button><span>View all</span> <i class="bx bx-right-arrow-alt"></i></button>
+    </div>
+    <div class="brands">
+      <div class="brand fadeupBrand">
+        <img src="./assets/svg/brands/toyota.svg" alt="toyota">
+        <p>Toyota</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/brands/ford.svg" alt="ford">
+        <p>Ford</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/brands/tesla.svg" alt="tesla">
+        <p>Tesla</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/brands/toyota2.svg" alt="toyota2">
+        <p>TOYOTA</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/brands/toyota3.svg" alt="toyota3">
+        <p>TOYOTA</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/brands/toyota4.svg" alt="toyota4">
+        <p>TOYOTA</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/brands/chevrolet.svg" alt="chevrolet">
+        <p>Chevrolet</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/brands/bmw.svg" alt="bmw">
+        <p>BMW</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/brands/mercedes.svg" alt="mercedes">
+        <p>Mercedes-Benz</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/brands/hyundai.svg" alt="hyundai">
+        <p>Hyundai</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/brands/audi.svg" alt="audi">
+        <p>Audi</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/brands/kia.svg" alt="kia">
+        <p>KIA</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="brands-section" style="margin-top: 100px;">
+    <div class="section-title">
+      <h1>Rent by body type</h1>
+      
+      <button><span>View all</span> <i class="bx bx-right-arrow-alt"></i></button>
+    </div>
+    <div class="brands">
+      <div class="brand fadeupBrand">
+        <img src="./assets/svg/body/suv.svg" alt="suv">
+        <p>SUV</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/body/crossover.svg" alt="crossover">
+        <p>Crossover</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/body/wagon.svg" alt="wagon">
+        <p>Wagon</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/body/family.svg" alt="family">
+        <p>Family MBP</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/body/sport.svg" alt="sport">
+        <p>Sport Couple</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/body/compact.svg" alt="compact">
+        <p>Compact</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/body/coup.svg" alt="coup">
+        <p>Coup</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/body/bmw.svg" alt="bmw">
+        <p>BMW</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/body/sedan.svg" alt="sedan">
+        <p>Sedan</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/body/limusine.svg" alt="limusine">
+        <p>Limusine</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/body/convertible.svg" alt="convertible">
+        <p>Convertiblei</p>
+      </div>
+      <div class="brand">
+        <img src="./assets/svg/body/crossover2.svg" alt="crossover2">
+        <p>Crossover</p>
+      </div>
+    </div>
+  </section>
+  
+  <div class="car-rental-section">
+    <div class="section-title-2">
+      <h1>Our Impressive Collection of Cars</h1>
+      <p><span>Ranging from elegant sedans to powerful sports cars, all carefully selected to provide our </span><span>customers with the ultimate driving experience.</span></p>
+
+        <div class="car-filter">
+          <button class="active">Popular Car</button>
+          <button>Luxury Car</button>
+          <button>Vintage Car</button>
+          <button>Family Car</button>
+          <button>Off-Road Car</button>
+        </div>
+      </div>
+      
+      <div class="cars">
+        <div class="car">
+          <img src="./assets/images/Rectangle 85.png" alt="">
+          <h3>Audi A8 L 2022</h3>
+          <h1><span>78.90</span><span>/day</span></h1>
+          <div class="car-info">
+            <div class="info">
+              <img src="./assets/svg/speedmeter.svg" alt="speedmeter">
+              <p>4,000</p>
+            </div>
+            <div class="info">
+            <img src="./assets/svg/device.svg" alt="device">
+            <p>Auto</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/person.svg" alt="person">
+            <p>4 Person</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/device2.svg" alt="device2">
+            <p>Electric</p>
+          </div>
+        </div>
+        <button>Rent Now</button>
+      </div>
+      <div class="car">
+        <img src="./assets/images/Rectangle 85 (1).png" alt="">
+        <h3>Nissan Maxima Platinum 2022</h3>
+        <h1><span>425</span><span>/day</span></h1>
+        <div class="car-info">
+          <div class="info">
+            <img src="./assets/svg/speedmeter.svg" alt="speedmeter">
+            <p>4,000</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/device.svg" alt="device">
+            <p>Auto</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/person.svg" alt="person">
+            <p>5 Person</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/device2.svg" alt="device2">
+            <p>V6 Engine</p>
+          </div>
+        </div>
+        <button>Rent Now</button>
+      </div>
+      <div class="car">
+        <img src="./assets/images/Rectangle 85 (2).png" alt="">
+        <h3>Porsche Cayenne GTS 2022</h3>
+        <h1><span>390</span><span>/day</span></h1>
+        <div class="car-info">
+          <div class="info">
+            <img src="./assets/svg/speedmeter.svg" alt="speedmeter">
+            <p>6,000</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/device.svg" alt="device">
+            <p>Auto</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/person.svg" alt="person">
+            <p>5 Person</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/device2.svg" alt="device2">
+            <p>twin-turbocharged V8</p>
+          </div>
+        </div>
+        <button>Rent Now</button>
+      </div>
+      <div class="car">
+        <img src="./assets/images/Rectangle 85 (3).png" alt="">
+        <h3>BMW M8 Coupe 2022</h3>
+        <h1><span>477</span><span>/day</span></h1>
+        <div class="car-info">
+          <div class="info">
+            <img src="./assets/svg/speedmeter.svg" alt="speedmeter">
+            <p>6,000</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/device.svg" alt="device">
+            <p>Auto</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/person.svg" alt="person">
+            <p>4 Person</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/device2.svg" alt="device2">
+            <p>twin-turbocharged V8</p>
+          </div>
+        </div>
+        <button>Rent Now</button>
+      </div>
+      <div class="car">
+        <img src="./assets/images/Rectangle 85 (4).png" alt="">
+        <h3>BMW X7 M50i 2022</h3>
+        <h1><span>119</span><span>/day</span></h1>
+        <div class="car-info">
+          <div class="info">
+            <img src="./assets/svg/speedmeter.svg" alt="speedmeter">
+            <p>5,500</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/device.svg" alt="device">
+            <p>Auto</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/person.svg" alt="person">
+            <p>7 Person</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/device2.svg" alt="device2">
+            <p>turbocharged V8</p>
+          </div>
+        </div>
+        <button>Rent Now</button>
+      </div>
+      <div class="car">
+        <img src="./assets/images/Rectangle 85 (5).png" alt="">
+        <h3>Porsche Cayenne GTS 2022</h3>
+        <h1><span>390</span><span>/day</span></h1>
+        <div class="car-info">
+          <div class="info">
+            <img src="./assets/svg/speedmeter.svg" alt="speedmeter">
+            <p>6,000</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/device.svg" alt="device">
+            <p>Auto</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/person.svg" alt="person">
+            <p>5 Person</p>
+          </div>
+          <div class="info">
+            <img src="./assets/svg/device2.svg" alt="device2">
+            <p>turbocharged V8</p>
+          </div>
+        </div>
+        <button>Rent Now</button>
+      </div>
+    </div>
+    <button class="seeAllCars">See all Cars <i class="bx bx-right-arrow-alt"></i></button>
+  </div>
+
+  <section class="hero-section">
+    <div class="section-title-2">
+      <h1>How it woks</h1>
+      <p><span>Renting a luxury car has never been easier. Our streamlined process makes it simple for you</span> <span>to book and confirm your vehicle of choice online</span></p>
+    </div>
+    
+    <div class="hero-sec">
+      <div class="hero fadeInRight">
+        <div class="icon">
+          <img src="./assets/svg/search.svg" alt="">
+        </div>
+        <div class="hero-info">
+          <h1>Browse and select</h1>
+          <p><span>Choose from our wide range of premium cars, select the</span> <span>pickup and return dates and locations that suit you best.</span></p>
+        </div>
+      </div>
+      <div class="hero fadeInRight">
+        <div class="icon">
+          <img src="./assets/svg/calendar.svg" alt="">
+        </div>
+        <div class="hero-info">
+          <h1>Book and confirm</h1>
+          <p><span>Book your desired car with just a few clicks and receive an</span> <span>instant confirmation via email or SMS.</span></p>
+        </div>
+      </div>
+      <div class="hero fadeInRight">
+        <div class="icon">
+          <img src="./assets/svg/smile.svg" alt="">
+        </div>
+        <div class="hero-info">
+          <h1>Enjoy your ride</h1>
+          <p><span>Pick up your car at the designated location and enjoy your </span> <span>premium driving experience with our top-quality service.</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="car-image">
+      <img class="fadeInLeft" src="./assets/images/image 35.png" alt="">
+    </div>
+  </section>
+
+  <section class="services-section">
+    <div class="section-title-2 autoDisplay">
+      <h1>Our Services & Benefits</h1>
+      <p><span>To make renting easy and hassle-free, we provide a variety of services and advantages. We </span><span>have you covered with a variety of vehicles and flexible rental terms.</span></p>
+    </div>
+
+    <div class="services">
+      <div class="service fadeInRight">
+        <img src="./assets/svg/services/quality.svg" alt="">
+        <h1>Quality Choice</h1>
+        <p>We offer a wide range of high-quality vehicles to choose from, including luxury cars, SUVs, vans, and more.</p>
+      </div>
+      <div class="service fadeUp">
+        <img src="./assets/svg/services/quality.svg" alt="">
+        <h1>Affordable Prices</h1>
+        <p>Our rental rates are highly competitive and affordable, allowing our customers to enjoy their trips without breaking the bank.</p>
+      </div>
+      <div class="service fadeInLeft">
+        <img src="./assets/svg/services/quality.svg" alt="">
+        <h1>Convenient Online Booking</h1>
+        <p>With our easy-to-use online booking system, customers can quickly and conveniently reserve their rental car from anywhere, anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="costumer-section">
+    <div class="section-title">
+      <h1>What Our Customers Say</h1>
+      <div class="slider">
+        <button><i class='bx bx-left-arrow-alt'></i></button>
+        <button><i class='bx bx-right-arrow-alt'></i></button>
+      </div>
+    </div>
+    <div class="costumer">
+      <p class="autoBlur">“I was really impressed with the level of service I received from this car rental company. 
+        The process was smooth and easy, and the car I rented was in excellent condition. 
+        The staff was friendly and helpful, and I felt well taken care of throughout my rental period. 
+        I would definitely recommend this company to anyone looking for a premium car rental experience.”</p>
+        <div class="profile">
+          <img src="./assets/images/Ellipse 13.png" alt="">
+          <div class="profile-info">
+            <h1>Lokman Hossain</h1>
+            <p><span>From</span> <span>Texas</span></p>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="ad-section">
+    <div class="section-title-3">
+      <h1>Download our mobile app ⚡️</h1>
+      <p>
+        <span>Get exclusive access to car rentals with our mobile app. Download </span>
+        <span>now and experience convenience on the go.</span>
+      </p>
+    </div>
+    <div class="download">
+      <img src="./assets/images/BTN 1.png" alt="">
+      <img src="./assets/images/BTN 2.png" alt="">
+    </div>
+  </section>
+  <footer>
+    <img class="logo" src="./assets/svg/logo.svg" alt="">
+
+    <ul>
+      <li>Rent</li>
+      <li>Share</li>
+      <li>About Us</li>
+      <li>Contact</li>
+    </ul>
+
+    <div class="social">
+      <div>
+        <img src="./assets/svg/social/instagram.svg" alt="instagram">
+      </div>
+      <div>
+        <img src="./assets/svg/social/basketball.svg" alt="basketball">
+      </div>
+      <div>
+        <img src="./assets/svg/social/twitter.svg" alt="twitter">
+      </div>
+      <div>
+        <img src="./assets/svg/social/youtube.svg" alt="youtube">
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

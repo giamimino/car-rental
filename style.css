@@ -11,6 +11,7 @@ body, html {
   user-select: none;
   scroll-behavior: smooth;
   outline: none;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -172,7 +173,9 @@ header button {
   height: 56px;
 }
 
-.div-nonName input:focus 
+.div-nonName input:focus {
+  outline: none;
+}
 
 .div-nonName input::placeholder {
   font-family: "Figtree", sans-serif;
@@ -195,23 +198,583 @@ header button {
   text-align: center;
   align-items: center;
   border-radius: 64px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.filter button:hover {
+  opacity: 0.9;
+  box-shadow: 1px 3px 8px #0f0f0f84;
 }
 
 .filter button i {
   font-size: 24px;
 }
 
+.white {
+  width: 100%;
+  background-color: #fff;
+  z-index: 99;
+  height: 200px;
+}
+
+.brands-section {
+  font-family: "Figtree", sans-serif;
+  width: 100%;
+  z-index: 99;
+  padding: 0 128px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #fff;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-title h1 {
+  font-weight: 700;
+}
+
+.brands-section .section-title button {
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  font-family: "Figtree", sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.brands-section .section-title button:hover span {
+  text-decoration: underline;
+}
+
+.section-title button i{
+  font-size: 20px;
+}
+
+.brands {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+
+.brand {
+  background-color: rgba(15, 15, 15, 0.05);
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  will-change: transform, opacity;
+  opacity: 0;
+}
+
+.brand.show {
+  animation: fadeupAnimationBrand 1s ease forwards;
+}
+
+.car.show {
+  animation: fadeupAnimationBrand 1s ease forwards;
+}
+
+.brand p {
+  font-weight: 500;
+}
+
+.brand:hover {
+  box-shadow: 0 0 8px rgba(15, 15, 15, 0.3);
+}
+
+.car-rental-section {
+  display: flex;
+  flex-direction: column;
+  padding: 128px;
+  margin-top: 128px;
+  background-color: #f5f5f5;
+  gap: 64px;
+  align-items: center;
+}
+
+.section-title-2 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Figtree", sans-serif;
+  gap: 24px;
+  align-items: center;
+}
+
+.section-title-2 h1 {
+  font-weight: 700;
+  font-size: 48px;
+}
+
+.section-title-2 p {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 160%;
+}
+
+.car-filter {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  width: 764px;
+}
+
+.car-filter button {
+  padding: 12px 19px;
+  background-color: #fff;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid #fff;
+  border-radius: 58px;
+  font-family: "Figtree", sans-serif;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.car-filter button:hover {
+  border: 1px solid #0f0f0f;
+}
+
+.car-filter button.active {
+  background-color: #0f0f0f;
+  color: #fff;
+}
+
+.cars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 32px;
+}
+
+.car {
+  font-family: "Figtree", sans-serif;
+  background-color: #fff;
+  padding: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  transition: 0.3s ease;
+  will-change: transform, opacity;
+  opacity: 0;
+}
+
+.car:hover {
+  border: 1px solid #000;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.08),
+              0 8px 8px -4px rgba(0, 0, 0, 0.03);
+}
+
+.car h3 {
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 600;
+  opacity: 0.8;
+  margin-top: 12px;
+}
+
+.car h1 span:nth-child(1) {
+  font-size: 32px;
+  color: #000;
+  line-height: 120%;
+  font-weight: 800;
+}
+
+.car h1 span:nth-child(2) {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 120%;
+  font-weight: 600;
+}
+
+.car-info {
+  margin-top: 4px;
+  display: flex;
+  padding: 8px 16px;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  border-radius: 16px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.8;
+}
+
+.info p {
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 500;
+}
+
+.info img {
+  width: 20px;
+  height: 20px;
+}
+
+.car button {
+  margin-top: 8px;
+  width: 100%;
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 32px;
+  font-size: 16px;
+  font-family: "Figtree", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.car:hover button {
+  background-color: #000;
+  color: #fff;
+}
+
+.car button:hover {
+  opacity: 0.9;
+}
+
+.seeAllCars {
+  padding: 16px 40px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  font-family: "Figtree", sans-serif;
+  width: 198px;
+  border: none;
+  border-radius: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+
+.seeAllCars i {
+  font-size: 24px;
+}
+
+.hero-section {
+  padding: 120px 128px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.hero-sec {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.hero {
+  padding: 32px 38px;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 50%;
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: "Figtree", sans-serif;
+}
+
+.hero-info h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.hero-info p {
+  font-size: 18px;
+  line-height: 160%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  letter-spacing: -2%;
+}
+
+.icon {
+  border-radius: 16px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 41px 15px;
+}
+
+.car-image {
+  position: absolute;
+  padding: 40px;
+  z-index: -1;
+  width: 740px;
+  height: 638px;
+  right: 100px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border-radius: 24px;
+  transform: translateY(200px) translateX(-50px);
+}
+
+.services-section {
+  background-color: #000;
+  padding: 128px;
+  color: #fff;
+}
+
+.services {
+  display: flex;
+  gap: 24px;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: #fff;
+  font-family: "Figtree", sans-serif;
+  margin-top: 64px;
+}
+
+.service h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.service p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #D6D6D6;
+  text-align: center;
+}
+
+.costumer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  padding: 128px;
+  font-family: "Figtree", sans-serif;
+}
+
+.costumer-section .section-title h1 {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: -2%;
+} 
+
+.slider {
+  display: flex;
+  gap: 8px;
+}
+
+.slider button {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #C0C0C0;
+  color: #A4A4A4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.costumer {
+  font-family: "Figtree", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.costumer p {
+  opacity: 0.8;
+  font-size: 32px;
+  line-height: 150%;
+  letter-spacing: -2%;
+  font-weight: 600;
+}
+
+.profile {
+  display: flex;
+  gap: 24px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-info h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -2%;
+  color: #0F0F0F;
+}
+
+.profile-info p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -2%;
+  color: #737373;
+}
+
+.profile-info p:nth-child(2) {
+  font-weight: 600;
+}
+
+.ad-section {
+  padding: 128px;
+  background-color: #0F0F0F;
+  display: flex;
+  gap: 102px;
+  color: #fff;
+  font-family: "Figtree", sans-serif;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-title-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.section-title-3 h1 {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 46px;
+}
+
+.section-title-3 p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 26px;
+  mix-blend-mode: normal;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+}
+
+.download {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+}
+
+.download img {
+  width: 193px;
+  height: 61px;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  padding: 43px 165px;
+  background-color: #0f0f0f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+footer ul li {
+  font-size: 14px;
+  color: #D9DBE1;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: "Figtree", sans-serif;
+  cursor: pointer;
+}
+
+footer ul li:hover {
+  text-decoration: underline;
+}
+
+.social {
+  display: flex;
+  gap: 16px;
+}
+
+.social div {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .fadeup {
   animation: fadeupAnimation 1s ease forwards;
 }
 
-.autoBlur {
-  animation: autoBlurAnimation linear both;
-  animation-timeline: view();
-}
 
 .fadeupBlur {
   animation: fadeupBlurAnimation 1s ease forwards;
+}
+
+@keyframes fadeupAnimationBrand {
+  0% {
+    transform: translateY(100px);
+    opacity: 0.3;
+    filter: blur(40px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+  }
 }
 
 @keyframes fadeupAnimation {
@@ -221,7 +784,7 @@ header button {
     top: 70%;
     opacity: 0.2;
   }
-
+  
   100% {
     top: -25%;
     left: 50%;
@@ -235,26 +798,57 @@ header button {
     filter: blur(15px);
     opacity: 0;
   }
-
+  
   100% {
     opacity: 1;
     filter: blur(0);
   }
 }
 
+/* .autoBlur {
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view(block);
+}
+
 @keyframes autoBlurAnimation {
-  0% {
-    filter: blur(40px);
-    opacity: 0;
-  }
+  0% { filter: blur(40px); opacity: 0; }
+  35%, 65% { filter: blur(0); opacity: 1; }
+  100% { filter: blur(40px); opacity: 0; }
+} */
 
-  35%, 65% {
-    filter: blur(0);
-    opacity: 1;
-  }
+.fadeInRight {
+  opacity: 0;
+  transform: translateX(-200px) scale(0.5);
+  filter: blur(10px);
+}
 
-  100% {
-    filter: blur(40px);
-    opacity: 0;
-  }
+.fadeInLeft {
+  opacity: 0;
+  transform: translateX(200px) scale(0.5);
+  filter: blur(10px);
+}
+
+.fadeUp {
+  opacity: 0;
+  transform: translateY(200px) scale(0.5);
+  filter: blur(10px);
+}
+
+.watcher {
+  height: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: #ff0000;
+  width: 100%;
+  scale: 0 1;
+
+  transform-origin: left;
+
+  animation: scrollWatcher linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scrollWatcher {
+  to {scale: 1 1;}
 }

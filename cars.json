@@ -1,0 +1,56 @@
+[
+  {
+    "image": "./assets/images/Rectangle 85.png",
+    "title": "Audi A8 L 2022",
+    "price": "78.90",
+    "speedmeter": "4,000",
+    "device": "Auto",
+    "person": "4",
+    "device2": "Electric"
+  },
+  {
+    "image": "./assets/images/Rectangle 85 (1).png",
+    "title": "Nissan Maxima Platinum 2022",
+    "price": "425",
+    "speedmeter": "4,000",
+    "device": "Auto",
+    "person": "5",
+    "device2": "V6 Engine"
+  },
+  {
+    "image": "./assets/images/Rectangle 85 (2).png",
+    "title": "Porsche Cayenne GTS 2022",
+    "price": "390",
+    "speedmeter": "6,000",
+    "device": "Auto",
+    "person": "5",
+    "device2": "twin-turbocharged V8"
+  },
+  {
+    "image": "./assets/images/Rectangle 85 (3).png",
+    "title": "BMW M8 Coupe 2022",
+    "price": "477",
+    "speedmeter": "6,000",
+    "device": "Auto",
+    "person": "4",
+    "device2": "twin-turbocharged V8"
+  },
+  {
+    "image": "./assets/images/Rectangle 85 (4).png",
+    "title": "BMW X7 M50i 2022",
+    "price": "119",
+    "speedmeter": "5,500",
+    "device": "Auto",
+    "person": "7",
+    "device2": "turbocharged V8"
+  },
+  {
+    "image": "./assets/images/Rectangle 85 (5).png",
+    "title": "Porsche Cayenne GTS 2022",
+    "price": "390",
+    "speedmeter": "6,000",
+    "device": "Auto",
+    "person": "5",
+    "device2": "twin-turbocharged V8"
+  }
+]
