@@ -1,10 +1,9 @@
 # Car Rental — Frontend Demo
 
 A lightweight **Car Rental** demo web app built with plain HTML, CSS and JavaScript.  
-It uses a local `cars.json` data file to populate a list of available cars and a small `app.js` to power UI interactions (filtering, selecting, booking simulation).
+It uses a local `cars.json` data file to populate a list of available cars and a small `app.js` to power UI interactions.
 
-> Repository: https://github.com/giamimino/car-rental. :contentReference[oaicite:1]{index=1}
-
+> Deployment: [Car Rental](https://giamimino.github.io/car-rental/).
 ---
 
 # Table of contents
@@ -36,4 +35,5 @@ This repo is a small, front-end-first proof-of-concept for a car rental UI: show
 - CSS (plain stylesheet)  
 - JavaScript (vanilla ES6)  
 - Local JSON data (`cars.json`) for demo content
+
 
